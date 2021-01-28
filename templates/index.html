@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+ <title>Chronic kidney disease predictor</title>
+ <style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color:hsl(0, 0%, 71%);  
+} 
+button {   
+        background-color:#37dbb0 ;   
+        width: 60%;  
+        color: white;   
+        padding: 15px;   
+        margin: 0px 0px;   
+        border: 1px solid grey;
+        border-radius: 30px;		
+        cursor: pointer; 
+        		
+         }  
+ input[type=text], input[type = Password ] {   
+        width: 50%;  
+        margin: 20px  10;  
+        padding: 12px 20px;     
+        border: 5px solid grey;   
+		border-radius: 30px;
+        box-sizing:border-box;   
+    } 
+     <!--button:hover {   
+        opacity: 0.7;   
+    } 
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    } -->   
+</style>
+
+</head>
+<body>
+    <br>
+    <center> <h1 style="text-shadow: 2px 2px 5px grey;"><font size="10" color="#37dbb0">Chronic Kidney Disease Prediction</font>
+    </p></h1> </center>
+    <form method="post"> 
+    <div class="container">
+      <br>
+
+  <p> <form action='/predict' method="post">
+      <center><label style="text-shadow: 2px 2px 5px grey;"><font size="6" color="#37dbb0"> <table>
+    <tr><td> Age
+       <center> <td>  <input type=number name="age"  placeholder="Age (in years) " required > </centre>
+        </tr>
+        <tr><td> bp 
+            <td>  <input  name="bp" type=number   placeholder="bp (in mm/Hg) " >   
+    </tr>
+    
+    <tr><td> al
+      <td>  <input type=number name="al"  placeholder="al" >
+        </tr>
+    <tr><td> rbc
+      <td>  <input  type=radio name="rbc" value=1> Normal <input  name="rbc" type=radio   value=0> Abnormal
+        </tr>
+    <tr><td> pc
+      <td>  <input  type=radio name="pc" value=1> Normal <input  name="rbc" type=radio   value=0> Abnormal 
+        </tr>
+    <tr><td> bgr 
+            <td>  <input  name="bgr" type=number   placeholder="bgr (in  mgs/dl) " > 
+    </tr>
+    <tr><td> bu 
+            <td>  <input  name="bu" type=number   placeholder="bu (in  mgs/dl) " > 
+        </tr>
+    <tr><td> sc
+            <td>  <input  name="sc" type=number placeholder="sc (in  mgs/dl) " >
+    </tr>
+    <tr><td> sod
+        <td>  <input type=number name="sod"  placeholder="sod(in mEq/L)"> 
+        </tr>
+        <tr><td> pot
+        <td>  <input type=number name="pot"  placeholder="pot(in mEq/L)">
+     </tr>
+    <tr><td> wc
+        <td>  <input type=number name="wc"  placeholder="wc(in cells/cumm)">
+    </tr><tr><td> dm
+        <td>  <input type=radio name="dm"   value=1> Yes <input  name="dm" type=radio   value=0> No  
+    </tr>
+    <tr><td>appet
+        <td>  <input type=radio name="appet"   value=1> good <input  name="appet" type=radio   value=0> poor 
+
+
+        
+    
+        <tr>
+    <td colspan=2 align=center><br><button type="submit">Predict Probability</button>
+    </tr>
+    </table>
+    </form>
+     <br> {{pred}}<br>  
+       </p>
+</div>
+      
+
+</body>
+</html>
