@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+input[type=number], select[name=heartrate] {   
+       border: 1px solid black;
+       padding: 5px;
+	   width: 100%;
+       border-radius: 30px;
+}
+
+button {  
+       background-color: black; 
+       width: 70%;  
+       color: white;
+       margin: 10px 0px;	   
+       border: 1px solid black;
+       padding: 15px;
+       border-radius: 30px;
+}
+
+</style>
+</head>
+
+<body style="background-image:linear-gradient(to right,rgba(0,255,0,0.3),rgba(0,255,0,0.3));">
+<center>
+<h1 style="text-shadow: 2px 2px 5px pink;"> Predict the probability of Chronic kidney Disease<h1>   </center> 
+    <form action='/predict' method="post">
+      <table>
+<tr style="text-shadow: 2px 2px 5px pink;"><td><font size="4"><br><b> Age
+			<td><br> <input type=number name="age"  placeholder="Age (in years)" >
+        </tr>
+<tr style="text-shadow: 2px 2px 5px pink;"><td><font size="4"><br><b> BP 
+            <td><br> <input type=number name="BP" placeholder="BP(in mm/Hg)" >
+		</tr>
+<tr style="text-shadow: 2px 2px 5px pink;"><td ><font size="4"><br><b> Al
+			<td><br>   <input type=number name="Al"  placeholder="Al " >
+        </tr>
+<tr style="text-shadow: 2px 2px 5px pink;"><td><font size="4"><br><b> RBC
+            <td><br>   <input  name="RBC" type=radio   value=1> Normal <input  name="RBC" type=radio   value=0> Abnormal
+		</tr>
+<tr style="text-shadow: 2px 2px 5px pink;"><td ><font size="4"><br><b> Sodium
+			<td><br>   <input type=number name="Sodium"  placeholder="Sodium (in mEq/L) " >
+        </tr>
+<tr style="text-shadow: 2px 2px 5px pink;"><td ><font size="4"><br><b>Potassium
+			<td><br>   <input type=number name="Potassium"  placeholder="Potassium (in mEq/L) " >
+        </tr>
+<tr style="text-shadow: 2px 2px 5px pink;"><td ><font size="4"><br><b>White Blood Cell 
+			<td><br>   <input type=number name="White Blood Cell "  placeholder="White Blood Cell (in mEq/L) " >
+        </tr>
+<tr style="text-shadow: 2px 2px 5px pink;"><td><font size="4"><br><b> Diabetes Mellitus
+            <td><br>   <input  name="Diabetes Mellitus" type=radio   value=1> Yes <input  name="Diabetes Mellitus" type=radio   value=0> No
+		</tr>
+<tr>
+		<td colspan=2 align=center href="/prob"><br><button type="submit">Predict Probability</button>
+		</tr>
+	  </table>
+    </body>
+</html>
+
+</div>
+
